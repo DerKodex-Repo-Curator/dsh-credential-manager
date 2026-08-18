@@ -1,0 +1,6 @@
+# This package resolves its @deepseek-ai/* peers from the RUNNING harness
+# installation (dsh symlinks its whole dependency graph into
+# $DSH_HOME/profiles/node_modules). Never auto-materialize peers into a
+# profile or this repo: a second cordis copy would break Service identity.
+autoInstallPeers: false
+dedupePeerDependents: false

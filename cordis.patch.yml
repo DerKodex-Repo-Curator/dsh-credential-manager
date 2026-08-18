@@ -1,0 +1,37 @@
+# Bundle patch for dsh-credential-manager.
+#
+# Two host rows, both unconfigurable-by-default (every knob carries a schema
+# default):
+#
+# - `credential-manager` — the host-plane service: metadata sidecar in the
+#   storage domain, secret values behind the ctx.credentials seam, and the
+#   shell-env contribution that injects DSH_CM_* variables into every model
+#   shell execution.
+# - `tool-credential-manager` — the four model-facing tools
+#   (credential_list / credential_create / credential_read /
+#     credential_update_note) plus the system-prompt policy section teaching
+#   the variable-first workflow. Registered on the HOST tools registry, so
+#   every agent preset sees them; remove this row to keep only the service
+#   and the Settings page.
+#
+# The package's `dsh.client` declaration makes the web plane serve the
+# Settings → Credentials page automatically; no client row is needed here.
+#
+# Tunables (override by restating the row with a config block — a patch
+# replaces a row's whole config):
+#
+#   - id: credential-manager
+#     name: dsh-credential-manager
+#     config:
+#       maxNoteBytes: 8192        # UTF-8 byte cap for one note field
+#
+#   - id: tool-credential-manager
+#     name: dsh-credential-manager/tools
+#     config:
+#       promptOrder: 116          # system-prompt section ordering weight
+- insert:
+    - id: credential-manager
+      name: dsh-credential-manager
+
+    - id: tool-credential-manager
+      name: dsh-credential-manager/tools
