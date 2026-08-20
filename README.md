@@ -2,6 +2,8 @@
 
 **English** | [简体中文](README.zh.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Named user credentials for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness): let the model use your API keys, tokens, and logins **by reference** — secret values never enter the conversation.
 
 One credential is one flat record holding exactly one secret value. The model creates empty placeholder records with its `credential_create` tool; you enter the secret value in **Settings → Credentials**. Every configured secret is injected into each model shell execution as a `DSH_CM_<ID>` environment variable, resolved per execution, so the value reaches commands without ever being printed into the transcript.

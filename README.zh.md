@@ -2,6 +2,8 @@
 
 [English](README.md) | **简体中文**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的命名凭据插件：让模型**按引用**使用你的 API key、令牌和登录凭据 —— 秘密值绝不进入对话。
 
 一条凭据是一条扁平记录，只保存一个秘密值。模型用 `credential_create` 工具创建空的占位记录；你在 **设置 → 凭据** 页面录入秘密值。每个已配置的秘密值都会以 `DSH_CM_<ID>` 环境变量的形式注入模型的每次 shell 执行（按次解析），值到达命令环境而不会被打印进对话记录。
