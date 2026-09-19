@@ -10,7 +10,7 @@
 import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import { Button, Pill } from '@deepseek-ai/dsh-client-ui-primitives'
-import type { SnapshotSelectorHook } from '@deepseek-ai/dsh-client-web-react'
+import type { SnapshotSelectorHook } from '@deepseek-ai/dsh-client-ui-slots'
 import type { CredentialView } from '../types.ts'
 import type { CredentialsSettingsState, CredentialsSettingsStore } from './store.ts'
 import type { en } from './locales.ts'

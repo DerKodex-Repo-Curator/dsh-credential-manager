@@ -27,17 +27,21 @@ const PLUGIN_ID = 'dsh-credential-manager'
 
 /**
  * Browser platform modules shared by the shell's frozen module table.
- * Mirror of `packages/client/web/src/platform.ts` (PLATFORM_MODULES) plus the
- * documented `@deepseek-ai/dsh-client-runtime/client` store exemption.
+ * Mirror of `packages/client/web/src/platform.ts` (PLATFORM_MODULES).
+ *
+ * 2026-09-19 (dsh 0.1.5-rc.2): @deepseek-ai/dsh-client-runtime no longer
+ * exists; its store engine moved to @deepseek-ai/dsh-client-store and its
+ * 'slots' service moved to @deepseek-ai/dsh-client-ui-renderer. The table now
+ * also carries @deepseek-ai/dsh-client-ui-dockkit. Anything the plugin imports
+ * that is NOT listed must inline (see noExternal) — a require() the frozen
+ * table cannot answer is a guaranteed runtime throw.
  */
 const CLIENT_EXTERNALS: readonly string[] = [
   'react', 'react/jsx-runtime', 'react-dom', 'react-dom/client', '@deepseek-ai/cordis',
+  '@deepseek-ai/dsh-client-store',
   '@deepseek-ai/dsh-client-ui-slots',
-  '@deepseek-ai/dsh-client-web-react',
   '@deepseek-ai/dsh-client-ui-primitives',
-  '@deepseek-ai/dsh-client-ui-attachment',
-  '@deepseek-ai/dsh-client-schema-form',
-  '@deepseek-ai/dsh-client-runtime/client',
+  '@deepseek-ai/dsh-client-ui-dockkit',
 ]
 
 /** Virtual-id wrapper keeping module CSS away from tsdown's own css pipeline. */

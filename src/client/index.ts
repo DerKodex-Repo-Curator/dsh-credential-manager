@@ -19,8 +19,8 @@ import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/dsh-client-ui-settings/client'
 // Type-only: pulls the locale plugin's Context merge (ctx.locale).
 import type {} from '@deepseek-ai/dsh-client-locale/client'
-import type { TypertClientRemote } from '@deepseek-ai/dsh-typert-protocol'
-import { bindSnapshotSelector } from '@deepseek-ai/dsh-client-web-react'
+import type { ClientRemote } from '@deepseek-ai/dsh-api-gateway/client'
+import { bindSnapshotSelector } from './use-snapshot.ts'
 import { CredentialsSection } from './CredentialsSection.tsx'
 import type { CredentialsSectionInjected } from './CredentialsSection.tsx'
 import { CredentialsSettingsStore } from './store.ts'
@@ -38,15 +38,15 @@ export type {
 export { CredentialsSettingsStore } from './store.ts'
 export type { CredentialsKey } from './locales.ts'
 
-// Local Context merges standing in for the api-gateway / client-runtime
-// packages (both unpublished on npm): the runtime-provided services are
-// identical at runtime, and the shapes below are the exact public faces this
-// plugin consumes. The merges are structurally identical to the upstream
-// declarations, so a compile graph containing both stays legal.
+// Local Context merges for the services this plugin consumes. dsh 0.1.5-rc.2
+// declares Context.remote as ClientRemote (an api-gateway augmentation), so the
+// remote property must repeat that exact type — a broader TypertClientRemote
+// declaration now collides (TS2717). The merge stays explicit so the client
+// half keeps its public faces documented in one place.
 declare module '@deepseek-ai/cordis' {
   interface Context {
-    /** Typert Remote client capability, provided by @deepseek-ai/dsh-api-gateway's client half. */
-    remote: TypertClientRemote
+    /** Client Remote capability, provided by @deepseek-ai/dsh-api-gateway's client half. */
+    remote: ClientRemote
   }
   interface Events {
     /** The connection carrier reset; open surfaces refetch. */
