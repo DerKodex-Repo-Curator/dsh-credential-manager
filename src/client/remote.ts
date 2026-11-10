@@ -229,14 +229,14 @@ const TYPERT_REMOTE: TypertRemoteContribution = {
           codec: {
             mode: 'strict',
             typeSymbol: 'dsh-credential-manager/types#CredentialManagerCreateRequest',
-            schema: _deepseek_ai_dsh_credential_manager_credentialManager_create_parameter_0$schema,
+            create: () => _deepseek_ai_dsh_credential_manager_credentialManager_create_parameter_0$schema,
           },
         },
       ],
       result: {
         mode: 'strict',
         typeSymbol: 'dsh-credential-manager/types#CredentialManagerCreateResult',
-        schema: _deepseek_ai_dsh_credential_manager_credentialManager_create_result$schema,
+        create: () => _deepseek_ai_dsh_credential_manager_credentialManager_create_result$schema,
       },
     },
     {
@@ -253,14 +253,14 @@ const TYPERT_REMOTE: TypertRemoteContribution = {
           codec: {
             mode: 'strict',
             typeSymbol: 'dsh-credential-manager/types#CredentialManagerDeleteRequest',
-            schema: _deepseek_ai_dsh_credential_manager_credentialManager_delete_parameter_0$schema,
+            create: () => _deepseek_ai_dsh_credential_manager_credentialManager_delete_parameter_0$schema,
           },
         },
       ],
       result: {
         mode: 'strict',
         typeSymbol: 'dsh-credential-manager/types#CredentialManagerDeleteResult',
-        schema: _deepseek_ai_dsh_credential_manager_credentialManager_delete_result$schema,
+        create: () => _deepseek_ai_dsh_credential_manager_credentialManager_delete_result$schema,
       },
     },
     {
@@ -277,14 +277,14 @@ const TYPERT_REMOTE: TypertRemoteContribution = {
           codec: {
             mode: 'strict',
             typeSymbol: 'dsh-credential-manager/types#CredentialManagerGetRequest',
-            schema: _deepseek_ai_dsh_credential_manager_credentialManager_get_parameter_0$schema,
+            create: () => _deepseek_ai_dsh_credential_manager_credentialManager_get_parameter_0$schema,
           },
         },
       ],
       result: {
         mode: 'strict',
         typeSymbol: 'dsh-credential-manager/types#CredentialManagerGetResult',
-        schema: _deepseek_ai_dsh_credential_manager_credentialManager_get_result$schema,
+        create: () => _deepseek_ai_dsh_credential_manager_credentialManager_get_result$schema,
       },
     },
     {
@@ -301,14 +301,14 @@ const TYPERT_REMOTE: TypertRemoteContribution = {
           codec: {
             mode: 'strict',
             typeSymbol: 'dsh-credential-manager/types#CredentialManagerListRequest',
-            schema: _deepseek_ai_dsh_credential_manager_credentialManager_list_parameter_0$schema,
+            create: () => _deepseek_ai_dsh_credential_manager_credentialManager_list_parameter_0$schema,
           },
         },
       ],
       result: {
         mode: 'strict',
         typeSymbol: 'dsh-credential-manager/types#CredentialManagerListResult',
-        schema: _deepseek_ai_dsh_credential_manager_credentialManager_list_result$schema,
+        create: () => _deepseek_ai_dsh_credential_manager_credentialManager_list_result$schema,
       },
     },
     {
@@ -325,14 +325,14 @@ const TYPERT_REMOTE: TypertRemoteContribution = {
           codec: {
             mode: 'strict',
             typeSymbol: 'dsh-credential-manager/types#CredentialManagerSetSecretRequest',
-            schema: _deepseek_ai_dsh_credential_manager_credentialManager_setSecret_parameter_0$schema,
+            create: () => _deepseek_ai_dsh_credential_manager_credentialManager_setSecret_parameter_0$schema,
           },
         },
       ],
       result: {
         mode: 'strict',
         typeSymbol: 'dsh-credential-manager/types#CredentialManagerSetSecretResult',
-        schema: _deepseek_ai_dsh_credential_manager_credentialManager_setSecret_result$schema,
+        create: () => _deepseek_ai_dsh_credential_manager_credentialManager_setSecret_result$schema,
       },
     },
     {
@@ -349,14 +349,14 @@ const TYPERT_REMOTE: TypertRemoteContribution = {
           codec: {
             mode: 'strict',
             typeSymbol: 'dsh-credential-manager/types#CredentialManagerUnsetSecretRequest',
-            schema: _deepseek_ai_dsh_credential_manager_credentialManager_unsetSecret_parameter_0$schema,
+            create: () => _deepseek_ai_dsh_credential_manager_credentialManager_unsetSecret_parameter_0$schema,
           },
         },
       ],
       result: {
         mode: 'strict',
         typeSymbol: 'dsh-credential-manager/types#CredentialManagerUnsetSecretResult',
-        schema: _deepseek_ai_dsh_credential_manager_credentialManager_unsetSecret_result$schema,
+        create: () => _deepseek_ai_dsh_credential_manager_credentialManager_unsetSecret_result$schema,
       },
     },
     {
@@ -373,14 +373,14 @@ const TYPERT_REMOTE: TypertRemoteContribution = {
           codec: {
             mode: 'strict',
             typeSymbol: 'dsh-credential-manager/types#CredentialManagerUpdateRequest',
-            schema: _deepseek_ai_dsh_credential_manager_credentialManager_update_parameter_0$schema,
+            create: () => _deepseek_ai_dsh_credential_manager_credentialManager_update_parameter_0$schema,
           },
         },
       ],
       result: {
         mode: 'strict',
         typeSymbol: 'dsh-credential-manager/types#CredentialManagerUpdateResult',
-        schema: _deepseek_ai_dsh_credential_manager_credentialManager_update_result$schema,
+        create: () => _deepseek_ai_dsh_credential_manager_credentialManager_update_result$schema,
       },
     },
   ],
